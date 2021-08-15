@@ -20,7 +20,7 @@ err() {
 }
 
 replace_txt () {
-  for file in $(grep -rl $1 | grep -v .pyc | grep -v .venv | grep -e .py -e .rst -e .md .toml); do
+  for file in $(grep -rl $1 | grep -v .pyc | grep -v .venv | grep -e .py -e .rst -e .md -e .toml); do
     echo "replace $1 -> $2 at ${file}"
     sed -i -e "s/$1/$2/g" ${file}
   done
