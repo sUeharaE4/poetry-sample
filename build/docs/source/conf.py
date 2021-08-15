@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath('../../../src'))
 
 project = '___REPLACE-PROJECT-NAME___'
 copyright = '___REPLACE-COPYRIGHT-YEAR___, ___REPLACE-COPYRIGHT-NAME___'
-author = '___REPLACE-AUTHOR-NAME___'
+author = '___REPLACE-PROJECT-AUTHOR-NAME___'
 
 # The full version, including alpha/beta/rc tags
 release = '___REPLACE-PROJECT-VERSION___'

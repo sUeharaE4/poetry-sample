@@ -2,7 +2,7 @@
 name = "___REPLACE-PROJECT-NAME___"
 version = "___REPLACE-PROJECT-VERSION___"
 description = "this is sample project for use poetry."
-authors = ["___REPLACE-AUTHOR-NAME___"]
+authors = ["___REPLACE-PROJECT-AUTHOR-NAME___"]
 
 [tool.taskipy.tasks]
 test = { cmd = "pytest -vv --durations=0 --log-cli-level=10", help = "runs all tests" }
