@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "poetry-sample"
-version = "0.1.0"
+name = "___REPLACE-PROJECT-NAME___"
+version = "___REPLACE-VERSION___"
 description = "this is sample project for use poetry."
-authors = ["sUeharaE4"]
+authors = ["___REPLACE-AUTHOR-NAME___"]
 
 [tool.taskipy.tasks]
 test = { cmd = "pytest -vv --durations=0 --log-cli-level=10", help = "runs all tests" }

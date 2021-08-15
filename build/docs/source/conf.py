@@ -19,12 +19,12 @@ sys.path.insert(0, os.path.abspath('../../../src'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'poetry-sample'
-copyright = '2021, sUeharaE4'
-author = 'sUeharaE4'
+project = '___REPLACE-PROJECT-NAME___'
+copyright = '___REPLACE-COPYRIGHT-YEAR___, ___REPLACE-COPYRIGHT-NAME___'
+author = '___REPLACE-AUTHOR-NAME___'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = '___REPLACE-VERSION___'
 
 
 # -- General configuration ---------------------------------------------------
