@@ -2,7 +2,7 @@
 #
 # setup project. make python venv, replace project name, author etc.
 
-set -eux
+set -eu
 
 VENV_DIR=.venv
 DEFAULT_PROJECT_NAME=poetry-sample
@@ -20,7 +20,7 @@ err() {
 }
 
 replace_txt () {
-  for file in $(grep -rl $1 | grep -v .pyc | grep -v .venv | grep -e .py -e .rst -e .md); do
+  for file in $(grep -rl $1 | grep -v .pyc | grep -v .venv | grep -e .py -e .rst -e .md .toml); do
     echo "replace $1 -> $2 at ${file}"
     sed -i -e "s/$1/$2/g" ${file}
   done
