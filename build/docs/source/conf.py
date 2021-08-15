@@ -24,7 +24,7 @@ copyright = '___REPLACE-COPYRIGHT-YEAR___, ___REPLACE-COPYRIGHT-NAME___'
 author = '___REPLACE-AUTHOR-NAME___'
 
 # The full version, including alpha/beta/rc tags
-release = '___REPLACE-VERSION___'
+release = '___REPLACE-PROJECT-VERSION___'
 
 
 # -- General configuration ---------------------------------------------------

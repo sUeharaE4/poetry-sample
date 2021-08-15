@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "___REPLACE-PROJECT-NAME___"
-version = "___REPLACE-VERSION___"
+version = "___REPLACE-PROJECT-VERSION___"
 description = "this is sample project for use poetry."
 authors = ["___REPLACE-AUTHOR-NAME___"]
 
