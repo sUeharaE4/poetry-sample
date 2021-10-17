@@ -9,6 +9,9 @@
   "python.testing.pytestArgs": ["tests"],
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
-  "editor.formatOnSave": true,
-  "editor.rulers": [79, 119]
+  "editor.formatOnSave": false,
+  "editor.rulers": [79, 119],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  }
 }

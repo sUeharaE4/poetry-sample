@@ -15,6 +15,14 @@ check_flake8 = { cmd = "flake8 ./src --docstring-convention numpy", help= "sub c
 check_flake8_with_output = { cmd = "flake8 ./src --docstring-convention numpy --format=pylint --output=./build/check_style/flake8.txt", help= "sub commands for check_style" }
 check_mypy = { cmd = "mypy tests ./src --config-file ./mypy.ini", help= "sub commands for check_style" }
 
+[tool.black]
+line-length = 119
+
+[tool.isort]
+profile = "black"
+line_length = 119
+multi_line_output = 3
+
 [tool.poetry.dependencies]
 python = "^3.8"
 taskipy = "^1.8.1"
@@ -32,6 +40,7 @@ Sphinx = "^4.1.2"
 sphinx-autodoc-typehints = "^1.12.0"
 sphinx-rtd-theme = "^0.5.2"
 flake8-docstrings = "^1.6.0"
+isort = "^5.9.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
