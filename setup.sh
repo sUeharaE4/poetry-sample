@@ -71,7 +71,7 @@ rm -rf ${VENV_DIR}
 python3 -m venv ${VENV_DIR}
 source ${VENV_DIR}/bin/activate
 
-poetry install --no-dev
+poetry install --only main
 
 print_msg "setup is done! venv dir is ${VENV_DIR} ."
 print_msg "if you need develop libs. exec bellow comands."
