@@ -66,6 +66,11 @@ replace_txt ___REPLACE-PROJECT-VERSION___ ${project_version}
 replace_txt ___REPLACE-PROJECT-AUTHOR-NAME___ ${project_author_name}
 replace_txt ___REPLACE-PROJECT-COPYRIGHT-YEAR___ ${project_copyright_year}
 replace_txt ___REPLACE-PROJECT-COPYRIGHT-NAME___ ${project_copyright_name}
+# the version in these files should be correct number like 0.1.0 instead of __REPLACE-PROJECT-VERSION__
+# so, these files are set 0.1.0 as default
+sed -i '' "s/0.1.0/${project_version}/g" pyproject.toml
+sed -i '' "s/0.1.0/${project_version}/g" src/__init__.py
+
 
 rm -rf ${VENV_DIR}
 python3 -m venv ${VENV_DIR}
