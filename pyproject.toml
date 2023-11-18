@@ -26,20 +26,20 @@ multi_line_output = 3
 
 [tool.poetry.dependencies]
 python = "^3.9"
-taskipy = "^1.8.1"
+taskipy = "^1.12.0"
 
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-mypy = "^0.910"
-black = "^21.7b0"
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+pytest = "^7.0"
+mypy = "^1.7"
 flake8 = "^6.0.0"
 pytest-mock = "^3.6.1"
-pytest-cov = "^2.12.1"
+pytest-cov = "^4.0"
 pytest-randomly = "^3.10.1"
-pytest-html = "^3.1.1"
+pytest-html = "^4.0"
 Sphinx = "^7.0.0"
-sphinx-autodoc-typehints = "^1.12.0"
-sphinx-rtd-theme = "^0.5.2"
+sphinx-autodoc-typehints = "^v1.25.2"
+sphinx-rtd-theme = "^1.0"
 flake8-docstrings = "^1.6.0"
 isort = "^5.10.1"
 
