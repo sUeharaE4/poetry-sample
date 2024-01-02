@@ -3,10 +3,11 @@ name = "___REPLACE-PROJECT-NAME___"
 version = "0.1.0"
 description = "this is sample project for use poetry."
 authors = ["___REPLACE-PROJECT-AUTHOR-NAME___"]
+packages = [{ include = "*", from = "src" }]
 
 [tool.taskipy.tasks]
-test = { cmd = "pytest -vv --durations=0 --log-cli-level=10", help = "runs all tests" }
-test_cov = { cmd = "coverage run -m pytest -vv --durations=0 --junitxml=build/tests/result.xml --cov=tests --cov-report=xml:build/tests/coverage.xml --cov-report=html:build/tests/htmlcov --html=build/tests/report.html", help = "runs all tests and make coverage report" }
+test = { cmd = "poetry install && pytest -vv --durations=0 --log-cli-level=10", help = "runs all tests" }
+test_cov = { cmd = "poetry install && coverage run -m pytest -vv --durations=0 --junitxml=build/tests/result.xml --cov=tests --cov-report=xml:build/tests/coverage.xml --cov-report=html:build/tests/htmlcov --html=build/tests/report.html", help = "runs all tests and make coverage report" }
 sphinx = { cmd = "task sphinx_apidoc && task sphinx_build", help = "make sphinx doc" }
 format = { cmd = "ruff format .", help = "format code" }
 # TODO: replace flake8 to ruff. I need to check how to output result in pylint style for CI process.
