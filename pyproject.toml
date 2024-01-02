@@ -8,6 +8,8 @@ authors = ["___REPLACE-PROJECT-AUTHOR-NAME___"]
 test = { cmd = "pytest -vv --durations=0 --log-cli-level=10", help = "runs all tests" }
 test_cov = { cmd = "coverage run -m pytest -vv --durations=0 --junitxml=build/tests/result.xml --cov=tests --cov-report=xml:build/tests/coverage.xml --cov-report=html:build/tests/htmlcov --html=build/tests/report.html", help = "runs all tests and make coverage report" }
 sphinx = { cmd = "task sphinx_apidoc && task sphinx_build", help = "make sphinx doc" }
+format = { cmd = "ruff format .", help = "format code" }
+# TODO: replace flake8 to ruff. I need to check how to output result in pylint style for CI process.
 check_style = { cmd = "task check_flake8 && task check_flake8_with_output && task check_mypy", help = "check code style" }
 check_complexity = { cmd = "cd src && docker run --rm --env CODECLIMATE_CODE=`pwd` --env CODECLIMATE_DEBUG=1 -v `pwd`:/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate analyze", help = "check_code complexity use docker image of code climate. this command needs docker." }
 sphinx_apidoc = { cmd = "sphinx-apidoc -M -f -o ./build/docs/source ./src", help = "sub commands for make sphinx doc" }
@@ -16,6 +18,16 @@ check_flake8 = { cmd = "flake8 ./src --docstring-convention numpy", help= "sub c
 check_flake8_with_output = { cmd = "flake8 ./src --docstring-convention numpy --format=pylint --output=./build/check_style/flake8.txt", help= "sub commands for check_style" }
 check_mypy = { cmd = "mypy tests ./src --config-file ./mypy.ini", help= "sub commands for check_style" }
 
+[tool.ruff]
+line-length = 79
+select = ["E", "F", "I", "W", "B", "PL", "D", "UP", "RUF"]
+unfixable = []
+target-version = "py311"
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+# TODO: remove black and isort after using ruff few months.
 [tool.black]
 line-length = 79
 
@@ -42,6 +54,8 @@ sphinx-autodoc-typehints = "^v1.25.2"
 sphinx-rtd-theme = "^2.0.0"
 flake8-docstrings = "^1.6.0"
 isort = "^5.10.1"
+ruff = "^0.1.9"
+ruff-lsp = "^0.0.48"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
