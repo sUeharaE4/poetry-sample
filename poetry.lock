@@ -525,14 +525,14 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "ruff-lsp"
-version = "0.0.48"
+version = "0.0.49"
 description = "A Language Server Protocol implementation for Ruff."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-lsprotocol = ">=2023.0.0a1"
+lsprotocol = ">=2023.0.0"
 packaging = ">=23.1"
 pygls = ">=1.1.0"
 ruff = ">=0.0.274"
@@ -768,7 +768,7 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "aae72f0795ef7c9254f0e22b7918fbeca0eef9e6af4dce42d7977c963ded3efc"
+content-hash = "0ffb32eb9a9fe2f038e0bd6f5f07a67dc3a19db36bd8742a8dc56efbd3f9696b"
 
 [metadata.files]
 alabaster = [
@@ -1208,8 +1208,8 @@ ruff = [
     {file = "ruff-0.1.13.tar.gz", hash = "sha256:e261f1baed6291f434ffb1d5c6bd8051d1c2a26958072d38dfbec39b3dda7352"},
 ]
 ruff-lsp = [
-    {file = "ruff_lsp-0.0.48-py3-none-any.whl", hash = "sha256:21a1c292631f323401362149c2299a7d9cf2b0296af62e8380cf1d23612bae1a"},
-    {file = "ruff_lsp-0.0.48.tar.gz", hash = "sha256:efc0381d43e34aef4b5fdecd6c84f8a1f3a52aa2c0cb2a4d73bb4b7075095e93"},
+    {file = "ruff_lsp-0.0.49-py3-none-any.whl", hash = "sha256:28ce187fc50dfa16873b08d7df0038182a3d13a89a0f338e2dd77ecd624bb4db"},
+    {file = "ruff_lsp-0.0.49.tar.gz", hash = "sha256:dc18046d7fdc81477435fe7b58407ba13964d2d1b67b8cd337d280f47dc405f0"},
 ]
 snowballstemmer = [
     {file = "snowballstemmer-2.2.0-py2.py3-none-any.whl", hash = "sha256:c8e1716e83cc398ae16824e5572ae04e0d9fc2c6b985fb0f900f5f0c96ecba1a"},
