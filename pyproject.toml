@@ -55,8 +55,8 @@ sphinx-autodoc-typehints = "^v1.25.2"
 sphinx-rtd-theme = "^2.0.0"
 flake8-docstrings = "^1.6.0"
 isort = "^5.10.1"
-ruff = "^0.1.14"
-ruff-lsp = "^0.0.50"
+ruff = "^0.2.0"
+ruff-lsp = "^0.0.52"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
