@@ -55,7 +55,7 @@ sphinx-autodoc-typehints = "^v2.0.0"
 sphinx-rtd-theme = "^2.0.0"
 flake8-docstrings = "^1.6.0"
 isort = "^5.10.1"
-ruff = "^0.3.0"
+ruff = "^0.4.0"
 ruff-lsp = "^0.0.53"
 
 [build-system]
